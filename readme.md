@@ -56,11 +56,20 @@ Paste in the follow to newly created `.eslintrc`:
 2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
 
 ```js
-  // Run ESLint each time you save a file
+  // Run formatter when you save code changes
+  "editor.formatOnSave": true,
+  // Disable default formatting (ESLint formatting will be used instead)
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // Auto-fix issues with ESLint when you save code changes
   "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
   },
-  // Disable Prettier for JavaScript and React (but not for HTML, CSS or others in future)
+  // Prevent double-formatting and potential ESLint <> Prettier conflicts
   "prettier.disableLanguages": [
       "javascript",
       "javascriptreact"
