@@ -34,7 +34,7 @@ You can avoid the need to do the previous step for each project and install this
 1. Install @ijsto/eslint-config:
 
 ```
-npx install-peerdeps --dev @ijsto/eslint-config
+npx install-peerdeps --global @ijsto/eslint-config
 ```
 
 2. Create a global `.eslintrc` file on your computer:
