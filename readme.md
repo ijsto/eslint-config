@@ -27,29 +27,6 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 4. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
 
-## Global Install
-
-You can avoid the need to do the previous step for each project and install this globally.
-
-1. Install @ijsto/eslint-config:
-
-```
-npx install-peerdeps --global @ijsto/eslint-config
-```
-
-2. Create a global `.eslintrc` file on your computer:
-
-- MacOS location: `~/.eslintrc`
-- Windows location: `C:\Users\you\.eslintrc`
-
-Paste in the follow to newly created `.eslintrc`:
-
-```json
-{
-  "extends": "@ijsto"
-}
-```
-
 # VS Code setup
 
 1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -74,6 +51,29 @@ Paste in the follow to newly created `.eslintrc`:
       "javascript",
       "javascriptreact"
   ],
+```
+
+## For a Global Installation
+
+You can avoid the need to do the previous step for each project and install this globally.
+
+1. Install @ijsto/eslint-config:
+
+```
+npx install-peerdeps --global @ijsto/eslint-config
+```
+
+2. Create a global `.eslintrc` file on your computer:
+
+- MacOS location: `~/.eslintrc`
+- Windows location: `C:\Users\you\.eslintrc`
+
+Paste in the follow to newly created `.eslintrc`:
+
+```json
+{
+  "extends": "@ijsto"
+}
 ```
 
 **For other editors, you can add the following to your `package.json` and run it manually:**
