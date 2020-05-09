@@ -1,6 +1,8 @@
 <p align="center">
 <img width="500px" src="https://raw.githubusercontent.com/ijsto/eslint-config/master/img/jumbo-v2.png"/>
 </p>
+
+
 # ESLint and Prettier configs for Next.js apps
 
 A set of awesome ESLint + Prettier configs.
