@@ -27,7 +27,36 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 4. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
 
-## Global Install
+# VS Code setup
+
+1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
+
+```js
+{ 
+  // ...
+  // Run formatter when you save code changes
+  "editor.formatOnSave": true,
+  // Disable default formatting (ESLint formatting will be used instead)
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // Auto-fix issues with ESLint when you save code changes
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  // Prevent double-formatting and potential ESLint <> Prettier conflicts
+  "prettier.disableLanguages": [
+      "javascript",
+      "javascriptreact"
+  ],
+}
+```
+
+## For a Global Installation
 
 You can avoid the need to do the previous step for each project and install this globally.
 
@@ -48,32 +77,6 @@ Paste in the follow to newly created `.eslintrc`:
 {
   "extends": "@ijsto"
 }
-```
-
-# VS Code setup
-
-1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
-
-```js
-  // Run formatter when you save code changes
-  "editor.formatOnSave": true,
-  // Disable default formatting (ESLint formatting will be used instead)
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false
-  },
-  // Auto-fix issues with ESLint when you save code changes
-  "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-  },
-  // Prevent double-formatting and potential ESLint <> Prettier conflicts
-  "prettier.disableLanguages": [
-      "javascript",
-      "javascriptreact"
-  ],
 ```
 
 **For other editors, you can add the following to your `package.json` and run it manually:**
