@@ -33,6 +33,8 @@ npx install-peerdeps --dev @ijsto/eslint-config
 2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
 
 ```js
+{ 
+  ...
   // Run formatter when you save code changes
   "editor.formatOnSave": true,
   // Disable default formatting (ESLint formatting will be used instead)
@@ -51,6 +53,7 @@ npx install-peerdeps --dev @ijsto/eslint-config
       "javascript",
       "javascriptreact"
   ],
+}
 ```
 
 ## For a Global Installation
