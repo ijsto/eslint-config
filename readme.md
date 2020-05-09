@@ -34,7 +34,7 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 ```js
 { 
-  ...
+  // ...
   // Run formatter when you save code changes
   "editor.formatOnSave": true,
   // Disable default formatting (ESLint formatting will be used instead)
