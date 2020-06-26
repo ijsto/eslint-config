@@ -19,6 +19,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-console': 'warn',
     'no-nested-ternary': 0,
+    'comma-dangle': 0,
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
     camelcase: 0,
@@ -37,6 +38,8 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/no-unescaped-entities': 0,
     'react/require-default-props': 0,
+    'react/state-in-constructor': 0,
+
     // __ ACCESSIBILITY
     'jsx-a11y/label-has-for': 0,
     'jsx-a11y/anchor-is-valid': 0,

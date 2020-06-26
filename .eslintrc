@@ -1,7 +1,3 @@
 {
-  "extends": "./index.js",
-  "rules": {
-    "comma-dangle": 0,
-    "react/state-in-constructor": ["warning", "never"]
-  }
+  "extends": "./index.js"
 }
