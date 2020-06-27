@@ -2,7 +2,6 @@
 <img width="500px" src="https://raw.githubusercontent.com/ijsto/eslint-config/master/img/jumbo-v2.png"/>
 </p>
 
-
 # ESLint and Prettier configs for Next.js apps
 
 A set of awesome ESLint + Prettier configs.
@@ -38,7 +37,7 @@ npx install-peerdeps --dev @ijsto/eslint-config
 2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
 
 ```js
-{ 
+{
   // ...
   // Run formatter when you save code changes
   "editor.formatOnSave": true,
@@ -53,10 +52,12 @@ npx install-peerdeps --dev @ijsto/eslint-config
   "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
   },
-  // Prevent double-formatting and potential ESLint <> Prettier conflicts
+  // Prevent double-formatting and potential ESLint <> Prettier conflicts (ESLint formatting will be used instead)
   "prettier.disableLanguages": [
       "javascript",
-      "javascriptreact"
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
   ],
 }
 ```
