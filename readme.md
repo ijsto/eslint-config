@@ -11,27 +11,9 @@ This package is intended for use with VS Code, however, can be easily used with 
 
 # Installation
 
-## Local / Per Project
+## Prerequisite: VS Code
 
-1. Install @ijsto/eslint-config:
-
-```
-npx install-peerdeps --dev @ijsto/eslint-config
-```
-
-2. Create an `.eslintrc` file in the root of your project's directory. Paste in the following:
-
-```json
-{
-  "extends": "@ijsto"
-}
-```
-
-3. You're done!
-
-4. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
-
-# VS Code setup
+Set up VS Code to fix ESLint issues on save and disable editor formatOnSave action.
 
 1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
@@ -62,9 +44,31 @@ npx install-peerdeps --dev @ijsto/eslint-config
 }
 ```
 
-## For a Global Installation
+## Local / Per Project
 
-You can avoid the need to do the previous step for each project and install this globally.
+1. Install @ijsto/eslint-config:
+
+```
+npx install-peerdeps --dev @ijsto/eslint-config
+```
+
+2. Create an `.eslintrc` file in the root of your project's directory. Paste in the following:
+
+```json
+{
+  "extends": "@ijsto"
+}
+```
+
+3. You're done!
+
+4. ESLint will run each time you save your file changes.
+
+
+## To install Globally
+
+If you would like to install the config computer-wide (globally) and not on each project, follow the below steps.
+There are some caveats to this setup.
 
 1. Install @ijsto/eslint-config:
 
@@ -85,26 +89,7 @@ Paste in the follow to newly created `.eslintrc`:
 }
 ```
 
-**For other editors, you can add the following to your `package.json` and run it manually:**
-
-Similarly you may use add this to VS Code and run it to iterate over the whole project (note that this may take some seconds or few minutes depending on the size of your project).
-
-```json
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-},
-```
-
-To run fix only React/Next.js files add the following:
-
-```json
-"scripts": {
-  "lint:fix": "eslint --fix --ext .js,.jsx ."
-}
-```
-
-## That's all!
+## That's all.
 
 Enjoy the package and feel free to contribute! Pull request or suggestions are most welcome!
 
