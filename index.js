@@ -6,11 +6,11 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    commonjs: true
+    commonjs: true,
   },
   parserOptions: {
     ecmaVersion: 2020,
-    ecmaFeatures: { jsx: true }
+    ecmaFeatures: { jsx: true },
   },
 
   plugins: ['react', 'prettier'],
@@ -27,8 +27,8 @@ module.exports = {
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', 'jsx']
-      }
+        extensions: ['.js', 'jsx'],
+      },
     ],
     // __ REACT
     'react/prop-types': 0,
@@ -46,6 +46,9 @@ module.exports = {
     // __ NEXT.JS
     'react/react-in-jsx-scope': 0,
     // __ PRETTIER
-    'prettier/prettier': ['error', { singleQuote: true, arrowParens: 'avoid' }]
-  }
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, arrowParens: 'avoid', trailingComma: 'all' },
+    ],
+  },
 };
