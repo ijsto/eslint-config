@@ -11,8 +11,14 @@ This package is intended for use with VS Code, however, can be easily used with 
 
 # Installation
 
-## Prerequisite: VS Code
+First installation will take you only a couple of minute, every subsequent should not take more than a minute.
 
+You can install the package 2.a) in repo of the project which will apply the linting only to the project and not other files on your computer or 2.b) on your computer which will apply the linting to all files with the included file extensions on your computer.
+
+Below are the steps to install (click on the heading to open the instructions).
+
+<details><summary><h2 style="display: inline; font-weight: bold;">1 · VS Code Setup</h2></summary>
+<p>
 Set up VS Code to fix ESLint issues on save and disable editor formatOnSave action.
 
 1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -44,7 +50,11 @@ Set up VS Code to fix ESLint issues on save and disable editor formatOnSave acti
 }
 ```
 
-## Local / Per Project
+</p>
+</details>
+
+<details><summary><h2 style="display: inline; font-weight: bold;">2.a · Per Project Setup (Local setup)</h2></summary>
+<p>
 
 1. Install @ijsto/eslint-config:
 
@@ -78,7 +88,14 @@ yarn remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-a
 npm --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
-## To install Globally
+</p>
+</details>
+<h3 style="margin: 1rem">
+or
+</h3>
+
+<details><summary><h2 style="display: inline; font-weight: bold;">2.b · Computer-wide (Global setup)</h2></summary>
+<p>
 
 If you would like to install the config computer-wide (globally) and not on each project, follow the below steps.
 There are some caveats to this setup.
@@ -116,8 +133,15 @@ yarn global remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-c
 npm remove --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
+</p>
+</details>
+
+<hr style="margin: 1rem"/>
+
 ## That's all.
 
-Enjoy the package and feel free to contribute! Pull request or suggestions are most welcome!
+Did this package help you? Give it a ★ and share with your friends! 🙂
+
+PRs, feature requests or suggestions are most welcome!
 
 [iJS.to](https://ijs.to)
