@@ -19,10 +19,10 @@ Below are the steps to install (click on the step to open the instructions).
 
 <details><summary><span>1 · VS Code Setup</span></summary>
 <p>
-Set up VS Code to fix ESLint issues on save and disable editor formatOnSave action.
 
 1. Install [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-2. In VS Code go to settings (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json` and paste in the following on the root of the object:
+2. Add below snippet to your User settings:
+   > First try (`⌘Cmd + ,` or `Ctrl + ,`) → type in `settings.json` file → click on `Edit in settings.json`. If that doesn't work the file is located in `$/Code/User/settings.json`
 
 ```js
 {
@@ -56,6 +56,8 @@ Set up VS Code to fix ESLint issues on save and disable editor formatOnSave acti
 <details><summary><span>2.a · Per Project Setup (Local setup)</span></summary>
 <p>
 
+## Install
+
 1. Install @ijsto/eslint-config:
 
 ```
@@ -74,7 +76,9 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 4. ESLint will run each time you save your file changes.
 
-### Uninstall
+<hr />
+
+## How to Uninstall
 
 This command will uninstall the @eslint-config and all related devDependencies **locally** (from the project)
 
@@ -98,7 +102,8 @@ or
 <p>
 
 If you would like to install the config computer-wide (globally) and not on each project, follow the below steps.
-There are some caveats to this setup.
+
+## Install
 
 1. Install @ijsto/eslint-config:
 
@@ -119,7 +124,9 @@ Paste in the follow to newly created `.eslintrc`:
 }
 ```
 
-### Uninstall globally
+<hr />
+
+## How to Uninstall
 
 This command will uninstall the @eslint-config and all related devDependencies **globally** (from your computer)
 
@@ -136,7 +143,7 @@ npm remove --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-
 </p>
 </details>
 
-<hr style="margin: 1rem"/>
+<hr/>
 
 ## That's all.
 
