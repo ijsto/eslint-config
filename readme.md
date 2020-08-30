@@ -87,6 +87,7 @@ If you have installed any of the eslint-config or eslint-plugin packages separat
 ```
 yarn remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
+or
 
 ```
 npm --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
@@ -135,6 +136,7 @@ If you have installed any of the eslint-config or eslint-plugin packages separat
 ```
 yarn global remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
+or
 
 ```
 npm remove --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
