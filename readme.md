@@ -2,7 +2,7 @@
 <img width="500px" src="https://raw.githubusercontent.com/ijsto/eslint-config/master/img/jumbo-v2.png"/>
 </p>
 
-# ESLint and Prettier configs for Next.js apps
+# ESLint and Prettier setup for VS Code
 
 A set of awesome ESLint + Prettier configs.
 Makes it easier to work with React, NextJS, Node apps.
