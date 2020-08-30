@@ -85,12 +85,13 @@ This command will uninstall the @eslint-config and all related devDependencies *
 If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
 
 ```
-yarn remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+yarn remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
+
 or
 
 ```
-npm --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 </p>
@@ -134,12 +135,13 @@ This command will uninstall the @eslint-config and all related devDependencies *
 If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
 
 ```
-yarn global remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+yarn global remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
+
 or
 
 ```
-npm remove --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm remove --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 </p>
