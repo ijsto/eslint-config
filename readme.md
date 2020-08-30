@@ -64,6 +64,19 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 4. ESLint will run each time you save your file changes.
 
+### Uninstall
+
+This command will uninstall the @eslint-config and all related devDependencies **locally** (from the project)
+
+If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
+
+```
+yarn remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+```
+
+```
+npm --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+```
 
 ## To install Globally
 
@@ -87,6 +100,20 @@ Paste in the follow to newly created `.eslintrc`:
 {
   "extends": "@ijsto"
 }
+```
+
+### Uninstall globally
+
+This command will uninstall the @eslint-config and all related devDependencies **globally** (from your computer)
+
+If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
+
+```
+yarn global remove @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+```
+
+```
+npm remove --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 ## That's all.
