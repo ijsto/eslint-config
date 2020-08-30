@@ -15,9 +15,9 @@ First installation will take you only a couple of minute, every subsequent shoul
 
 You can install the package 2.a) in repo of the project which will apply the linting only to the project and not other files on your computer or 2.b) on your computer which will apply the linting to all files with the included file extensions on your computer.
 
-Below are the steps to install (click on the heading to open the instructions).
+Below are the steps to install (click on the step to open the instructions).
 
-<details><summary><h2 style="display: inline; font-weight: bold;">1 · VS Code Setup</h2></summary>
+<details><summary><span>1 · VS Code Setup</span></summary>
 <p>
 Set up VS Code to fix ESLint issues on save and disable editor formatOnSave action.
 
@@ -53,7 +53,7 @@ Set up VS Code to fix ESLint issues on save and disable editor formatOnSave acti
 </p>
 </details>
 
-<details><summary><h2 style="display: inline; font-weight: bold;">2.a · Per Project Setup (Local setup)</h2></summary>
+<details><summary><span>2.a · Per Project Setup (Local setup)</span></summary>
 <p>
 
 1. Install @ijsto/eslint-config:
@@ -94,7 +94,7 @@ npm --global @ijsto/eslint-config @prisma/cli babel-eslint eslint eslint-config-
 or
 </h3>
 
-<details><summary><h2 style="display: inline; font-weight: bold;">2.b · Computer-wide (Global setup)</h2></summary>
+<details><summary><span>2.b · Computer-wide (Global setup)</span></summary>
 <p>
 
 If you would like to install the config computer-wide (globally) and not on each project, follow the below steps.
