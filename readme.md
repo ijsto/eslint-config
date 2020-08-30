@@ -59,6 +59,7 @@ Below are the steps to install (click on the step to open the instructions).
 ## Install
 
 1. Install @ijsto/eslint-config:
+   > this command will auto-detect if you are using yarn by default and prompt you to confirm before proceeding.
 
 ```
 npx install-peerdeps --dev @ijsto/eslint-config
@@ -108,6 +109,7 @@ If you would like to install the config computer-wide (globally) and not on each
 ## Install
 
 1. Install @ijsto/eslint-config:
+   > this command will auto-detect if you are using yarn by default and prompt you to confirm before proceeding.
 
 ```
 npx install-peerdeps --global @ijsto/eslint-config
