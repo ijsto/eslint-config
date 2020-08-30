@@ -19,7 +19,16 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-console': 'warn',
     'no-nested-ternary': 0,
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+        imports: 'always-multiline',
+        objects: 'always-multiline',
+      },
+    ],
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
     camelcase: 0,
@@ -48,7 +57,7 @@ module.exports = {
     // __ PRETTIER
     'prettier/prettier': [
       'error',
-      { singleQuote: true, arrowParens: 'avoid', trailingComma: 'all' },
+      { singleQuote: true, arrowParens: 'avoid', trailingComma: 'es5' },
     ],
   },
 };

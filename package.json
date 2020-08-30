@@ -1,6 +1,6 @@
 {
   "name": "@ijsto/eslint-config",
-  "version": "2.1.3",
+  "version": "2.1.5",
   "description": "ESLint and Prettier setup",
   "author": "Scott Agirs Neminskis <scott@ijs.to>",
   "repository": "git@github.com:ijsto/eslint-config.git",
