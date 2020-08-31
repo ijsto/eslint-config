@@ -19,16 +19,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-console': 'warn',
     'no-nested-ternary': 0,
-    'comma-dangle': [
-      'error',
-      {
-        arrays: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never',
-        imports: 'always-multiline',
-        objects: 'always-multiline',
-      },
-    ],
+    'comma-dangle': 0,
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
     camelcase: 0,
