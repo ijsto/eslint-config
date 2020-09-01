@@ -1,54 +1,71 @@
-// see https://github.com/ijsto/eslint-config-ijs
+const dotProp = require('dot-prop');
+const readPkgUp = require('read-pkg-up');
+const semver = require('semver');
 
-module.exports = {
-  parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+const base = require('./src/base');
+const jsxA11y = require('./src/jsx-a11y');
+const next = require('./src/next');
+const prettier = require('./src/prettier');
+const react = require('./src/react');
+const reactHooks = require('./src/react-hooks');
+
+const pkg = readPkgUp.sync() || {};
+
+const getUsage = dependency =>
+  dotProp.get(pkg, `package.dependencies.${dependency}`) ||
+  dotProp.get(pkg, `package.devDependencies.${dependency}`);
+
+const reactUsage = getUsage('react');
+const reactVersion = reactUsage ? semver.coerce(reactUsage).version : undefined;
+
+const config = {
   env: {
     browser: true,
-    es6: true,
     commonjs: true,
+    es6: true,
   },
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2020,
     ecmaFeatures: { jsx: true },
+    ecmaVersion: 2020,
   },
-
-  plugins: ['react', 'prettier'],
+  plugins: ['prettier'],
   rules: {
-    // __ CORE
-    'import/prefer-default-export': 0,
-    'no-console': 'warn',
-    'no-nested-ternary': 0,
-    'comma-dangle': 0,
-    'no-underscore-dangle': 0,
-    'no-unused-expressions': ['error', { allowTernary: true }],
-    camelcase: 0,
-    'react/self-closing-comp': 1,
-    'react/jsx-filename-extension': [
-      1,
-      {
-        extensions: ['.js', 'jsx'],
-      },
-    ],
-    // __ REACT
-    'react/prop-types': 0,
-    'react/destructuring-assignment': 0,
-    'react/jsx-no-comment-textnodes': 0,
-    'react/jsx-props-no-spreading': 0,
-    'react/no-array-index-key': 0,
-    'react/no-unescaped-entities': 0,
-    'react/require-default-props': 0,
-    'react/state-in-constructor': 0,
-
-    // __ ACCESSIBILITY
-    'jsx-a11y/label-has-for': 0,
-    'jsx-a11y/anchor-is-valid': 0,
-    // __ NEXT.JS
-    'react/react-in-jsx-scope': 0,
-    // __ PRETTIER
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, arrowParens: 'avoid', trailingComma: 'es5' },
-    ],
+    ...base,
+    ...prettier,
   },
 };
+
+if (reactVersion) {
+  dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
+  dotProp.set(config, 'settings.react.version', 'detect');
+  config.plugins.push('react');
+  config.rules = {
+    ...config.rules,
+    ...react,
+  };
+
+  if (semver.gte(reactVersion, '16.8.0')) {
+    config.plugins.push('react-hooks');
+    config.rules = {
+      ...config.rules,
+      ...reactHooks,
+    };
+  }
+
+  config.plugins.push('jsx-a11y');
+  config.rules = {
+    ...config.rules,
+    ...jsxA11y,
+  };
+
+  if (getUsage('next')) {
+    config.rules = {
+      ...config.rules,
+      ...next,
+    };
+  }
+}
+
+module.exports = config;
