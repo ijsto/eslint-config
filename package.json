@@ -1,6 +1,6 @@
 {
   "name": "@ijsto/eslint-config",
-  "version": "2.1.26",
+  "version": "3.0.0",
   "description": "ESLint and Prettier setup",
   "author": "Scott Agirs Neminskis <scott@ijs.to>",
   "repository": "git@github.com:ijsto/eslint-config.git",
@@ -23,6 +23,11 @@
     "eslint-plugin-react-hooks": "^1.4.0",
     "prettier": "^1.16.4"
   },
+  "dependencies": {
+    "dot-prop": "^5.2.0",
+    "read-pkg-up": "6.0.0",
+    "semver": "6.3.0"
+  },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "eslint": "^6.1.0",
@@ -44,10 +49,5 @@
     "lint",
     "prettier",
     "vscode"
-  ],
-  "dependencies": {
-    "dot-prop": "^5.2.0",
-    "read-pkg-up": "^7.0.1",
-    "semver": "^7.3.2"
-  }
+  ]
 }
