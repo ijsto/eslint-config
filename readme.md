@@ -10,6 +10,7 @@ Makes it easier to work with React, NextJS, Node apps.
 This package is intended for use with VS Code, however, can be easily used with any text editors.
 
 # Installation
+> Please Note: Sometimes you may need to restart VSCode (quit completely all windows and relaunch) for it to trigger the ESLint to work, this is inconsistent and not related to this package, but something you should be aware of.
 
 First installation will take you only a couple of minute, every subsequent should not take more than a minute.
 
@@ -57,6 +58,7 @@ Below are the steps to install (click on the step to open the instructions).
 <p>
 
 ## Install
+
 
 1. Install @ijsto/eslint-config:
    > this command will auto-detect if you are using yarn by default and prompt you to confirm before proceeding.
