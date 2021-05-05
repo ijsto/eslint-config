@@ -54,7 +54,7 @@ Below are the steps to install (click on the step to open the instructions).
 
 </p>
 </details>
-
+<hr />
 <details><summary><span>2.a · Per Project Setup (Local setup)</span></summary>
 <p>
 
@@ -91,7 +91,7 @@ If you have installed any of the eslint-config or eslint-plugin packages separat
 yarn remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
-or
+or (npm)
 
 ```
 npm --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
@@ -99,9 +99,8 @@ npm --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslin
 
 </p>
 </details>
-<h3 style="margin: 1rem">
-or
-</h3>
+
+<hr />
 
 <details><summary><span>2.b · Computer-wide (Global setup)</span></summary>
 <p>
