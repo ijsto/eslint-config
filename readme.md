@@ -5,12 +5,13 @@
 # ESLint and Prettier setup for VS Code
 
 A set of awesome ESLint + Prettier configs.
-Makes it easier to work with React, NextJS, Node apps.
+Makes it easier to work with React, Next.js, Node apps.
 
 This package is intended for use with VS Code, however, can be easily used with any text editors.
 
 # Installation
-> Please Note: Sometimes you may need to restart VSCode (quit completely all windows and relaunch) for it to trigger the ESLint to work, this is inconsistent and not related to this package, but something you should be aware of.
+
+> ### **You may need to restart VSCode once installed.**
 
 First installation will take you only a couple of minute, every subsequent should not take more than a minute.
 
@@ -58,7 +59,6 @@ Below are the steps to install (click on the step to open the instructions).
 <p>
 
 ## Install
-
 
 1. Install @ijsto/eslint-config:
    > this command will auto-detect if you are using yarn by default and prompt you to confirm before proceeding.
@@ -160,3 +160,7 @@ Did this package help you? Give it a ★ and share with your friends! 🙂
 PRs, feature requests or suggestions are most welcome!
 
 [iJS.to](https://ijs.to)
+
+# Troubleshooting
+
+If you followed the steps, yet still cannot get ESLint to work, you can try deleting `/node_modules` and running `yarn` or `npm i` depending on which one you use.
