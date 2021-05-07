@@ -1,6 +1,6 @@
 {
   "name": "@ijsto/eslint-config",
-  "version": "3.0.2",
+  "version": "4.0.1",
   "description": "ESLint and Prettier setup",
   "author": "Scott Agirs Neminskis <scott@ijs.to>",
   "repository": "git@github.com:ijsto/eslint-config.git",
@@ -11,35 +11,35 @@
   },
   "main": "index.js",
   "peerDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
-    "dot-prop": "^5.2.0",
-    "read-pkg-up": "6.0.0",
-    "semver": "6.3.0"
+    "dot-prop": "^6.0.1",
+    "read-pkg-up": "8.0.0",
+    "semver": "7.3.5"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.4.0",
-    "prettier": "^1.16.4"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "config",
