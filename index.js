@@ -3,16 +3,22 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 
 const dotProp = require('dot-prop');
 const findUp = require('find-up');
+const readPkgUp = require('read-pkg-up');
 const semver = require('semver');
 
 const base = require('./src/base');
 const jsxA11y = require('./src/jsx-a11y');
-const node = require('./src/node');
 const next = require('./src/next');
+const node = require('./src/node');
 const prettier = require('./src/prettier');
 const react = require('./src/react');
 const reactHooks = require('./src/react-hooks');
-const { checkIfHasPackage } = require('./utils');
+
+const pkg = readPkgUp.sync() || {};
+
+const checkIfHasPackage = dependency =>
+  dotProp.get(pkg, `packageJson.dependencies.${dependency}`) ||
+  dotProp.get(pkg, `packageJson.devDependencies.${dependency}`);
 
 const usesBabelConfig = findUp.sync([
   '.babelrc',
@@ -21,7 +27,6 @@ const usesBabelConfig = findUp.sync([
 ]);
 const usesNext = checkIfHasPackage('next');
 const usesReact = checkIfHasPackage('react');
-const usesReactNative = checkIfHasPackage('react-native');
 const reactVersion = usesReact ? semver.coerce(usesReact).version : undefined;
 
 const config = {
@@ -49,7 +54,7 @@ const config = {
   },
 };
 
-if (usesReact) {
+if (usesReact || usesNext) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
   config.plugins.push('react');
@@ -66,19 +71,12 @@ if (usesReact) {
     };
   }
 
-  if (usesReactNative) {
-    dotProp.set(config, 'env.react-native/react-native', true);
-    config.plugins.push('react-native');
-    config.rules = {
-      ...config.rules,
-    };
-  } else {
-    config.plugins.push('jsx-a11y');
-    config.rules = {
-      ...config.rules,
-      ...jsxA11y,
-    };
-  }
+  // Disable if in future implementing React Native.
+  config.plugins.push('jsx-a11y');
+  config.rules = {
+    ...config.rules,
+    ...jsxA11y,
+  };
 }
 
 if (usesBabelConfig) {
