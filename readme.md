@@ -55,7 +55,7 @@ Below are the steps to install (click on the step to open the instructions).
 </p>
 </details>
 <hr />
-<details><summary><span>2.a · Per Project Setup (Local setup)</span></summary>
+<details><summary><span>2.a · RECOMMENDED: Per Project Setup (Local setup)</span></summary>
 <p>
 
 ## Install
@@ -88,13 +88,13 @@ This command will uninstall the @eslint-config and all related devDependencies *
 If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
 
 ```
-yarn remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+yarn remove @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 or (npm)
 
 ```
-npm --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm remove @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 </p>
@@ -144,7 +144,7 @@ yarn global remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb
 or
 
 ```
-npm remove --global @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm remove --global @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 </p>
