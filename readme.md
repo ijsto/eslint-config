@@ -160,3 +160,12 @@ PRs, feature requests or suggestions are most welcome!
 # Troubleshooting
 
 If you followed the steps, yet still cannot get ESLint to work, you can try deleting `/node_modules` and running `yarn` or `npm i` depending on which one you use.
+
+## **Contributing 💪🏼**
+
+Thank you for considering to contribute to this project.
+
+We are working on improving the contributing guidelines, for now, here is current TODO list:
+
+- [ ] Handle workspaces (see TODO:s in `index.js` file)
+- [ ] Create `CONTRIBUTING.md` file with guidelines
