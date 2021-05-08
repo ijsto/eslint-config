@@ -2,14 +2,15 @@
 <img width="500px" src="https://raw.githubusercontent.com/ijsto/eslint-config/master/img/jumbo-v2.png"/>
 </p>
 
-# ESLint and Prettier setup for VS Code
+# **ESLint and Prettier setup for VS Code**
 
-A set of awesome ESLint + Prettier configs.
-Makes it easier to work with React, Next.js, Node apps.
+- A set of awesome ESLint + Prettier configs.
+- Makes it easier to work with React, Next.js, Node apps.
+- This package is intended for use with VS Code, however, can be easily used with any text editors.
 
-This package is intended for use with VS Code, however, can be easily used with any text editors.
+> This package will automatically detect if you're using React, Next.js, Node (and other in near future), and apply appropriate linting rules. 👌🏼
 
-# Installation
+# **Installation**
 
 > ### **You may need to restart VSCode once installed.**
 
@@ -40,11 +41,11 @@ Below are the steps to install (click on the step to open the instructions).
   },
   // Auto-fix issues with ESLint when you save code changes
   "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+    "source.fixAll.eslint": true
   },
   // Prevent double-formatting and potential ESLint <> Prettier conflicts (ESLint formatting will be used instead)
   "prettier.disableLanguages": [
-      "javascript",
+    "javascript",
       "javascriptreact",
       "typescript",
       "typescriptreact",
@@ -77,25 +78,7 @@ npx install-peerdeps --dev @ijsto/eslint-config
 
 3. You're done!
 
-4. ESLint will run each time you save your file changes.
-
-<hr />
-
-## How to Uninstall
-
-This command will uninstall the @eslint-config and all related devDependencies **locally** (from the project)
-
-If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
-
-```
-yarn remove @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
-```
-
-or (npm)
-
-```
-npm remove @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
-```
+4. ESLint will now run and format your code each time you save your file.
 
 </p>
 </details>
@@ -129,28 +112,42 @@ Paste in the follow to newly created `.eslintrc`:
 }
 ```
 
+</p>
+</details>
+
+<hr/>
+
+## **How to Uninstall**
+
 <hr />
 
-## How to Uninstall
+If something doesn't work or you should try manually deleting your `node_modules` folder. This usually helps resolving any issues with this config not working.
 
-This command will uninstall the @eslint-config and all related devDependencies **globally** (from your computer)
+If you would like to uninstall this `eslint-config`, run the below commands:
 
-If you have installed any of the eslint-config or eslint-plugin packages separately, don't forgot to remove it from the list.
+### **Local uninstall (per project)**
 
 ```
-yarn global remove @ijsto/eslint-config babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+yarn remove eslint @ijsto/eslint-config
+```
+
+or global (computer-wise)
+
+```
+npm remove eslint @ijsto/eslint-config
+```
+
+### **Global uninstall**
+
+```
+yarn global remove eslint @ijsto/eslint-config
 ```
 
 or
 
 ```
-npm remove --global @ijsto/eslint-config @babel/eslint-parser eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-html eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm remove --global eslint @ijsto/eslint-config
 ```
-
-</p>
-</details>
-
-<hr/>
 
 ## That's all.
 
