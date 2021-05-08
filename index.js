@@ -54,6 +54,37 @@ const config = {
   },
 };
 
+// NOTE: IMPORTANT: Currently hasWorkspaces is not working properly, see TODO:s below
+const hasWorkspaces = dotProp.get(pkg, `packageJson.workspaces`);
+if (hasWorkspaces) {
+  dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
+  dotProp.set(config, 'settings.react.version', 'detect');
+
+  // TODO: Optimize - see if there's a way to comb through worksapces and
+  // apply to individual `.eslintrc` configs.
+  const rulesForWorkspaces = {
+    ...config.rules,
+    ...react,
+    ...reactHooks,
+    ...jsxA11y,
+  };
+
+  // TODO: How to handle parsing on per-package basis.
+  if (usesBabelConfig) {
+    dotProp.set(
+      config,
+      'parserOptions.babelOptions.configFile',
+      usesBabelConfig
+    );
+    dotProp.set(config, 'parserOptions.requireConfigFile', true);
+  }
+
+  config.plugins.push('react');
+  config.rules = rulesForWorkspaces;
+
+  return;
+}
+
 if (usesReact || usesNext) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
