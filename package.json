@@ -11,34 +11,29 @@
   },
   "main": "index.js",
   "peerDependencies": {
+    "eslint": "^7.25.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.0",
     "@babel/eslint-parser": "^7.13.14",
-    "eslint": "^7.25.0",
+    "@rushstack/eslint-patch": "^1.0.6",
+    "dot-prop": "^6.0.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
-  },
-  "dependencies": {
-    "@babel/eslint-parser": "^7.13.14",
-    "dot-prop": "^6.0.1",
-    "read-pkg-up": "8.0.0",
+    "find-up": "5.0.0",
+    "prettier": "^2.2.1",
+    "read-pkg-up": "7.0.1",
     "semver": "7.3.5"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1"
   },
   "keywords": [
