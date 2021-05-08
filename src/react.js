@@ -15,4 +15,3 @@ module.exports = {
   'react/self-closing-comp': 1,
   'react/state-in-constructor': 0,
 };
- 
