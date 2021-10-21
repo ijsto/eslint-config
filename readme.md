@@ -31,7 +31,9 @@ Below are the steps to install (click on the step to open the instructions).
 {
   // ...
   // Run formatter when you save code changes
-  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   // Disable default formatting (ESLint formatting will be used instead)
   "[javascript]": {
     "editor.formatOnSave": false
