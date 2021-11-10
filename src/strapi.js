@@ -1,4 +1,5 @@
 module.exports = {
   // __ STRAPI.JS
-  strict: 'error',
+  'sort-keys': 0,
+  strict: 0,
 };
