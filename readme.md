@@ -42,14 +42,7 @@ Below are the steps to install (click on the step to open the instructions).
   // Auto-fix issues with ESLint when you save code changes
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  // Prevent double-formatting and potential ESLint <> Prettier conflicts (ESLint formatting will be used instead)
-  "prettier.disableLanguages": [
-    "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-  ],
+  }
 }
 ```
 
