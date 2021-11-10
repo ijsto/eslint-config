@@ -10,6 +10,7 @@ const base = require('./src/base');
 const jsxA11y = require('./src/jsx-a11y');
 const next = require('./src/next');
 const node = require('./src/node');
+const strapi = require('./src/strapi');
 const prettier = require('./src/prettier');
 const react = require('./src/react');
 const reactHooks = require('./src/react-hooks');
@@ -27,6 +28,7 @@ const usesBabelConfig = findUp.sync([
 ]);
 const usesNext = checkIfHasPackage('next');
 const usesReact = checkIfHasPackage('react');
+const usesStrapi = checkIfHasPackage('react');
 const reactVersion = usesReact ? semver.coerce(usesReact).version : undefined;
 
 const config = {
@@ -80,8 +82,6 @@ if (hasWorkspaces) {
 
   config.plugins.push('react');
   config.rules = rulesForWorkspaces;
-
-  return;
 }
 
 if (usesReact || usesNext) {
@@ -124,6 +124,12 @@ if (usesNext) {
   config.rules = {
     ...config.rules,
     ...next,
+  };
+}
+if (usesStrapi) {
+  config.rules = {
+    ...config.rules,
+    ...strapi,
   };
 }
 
