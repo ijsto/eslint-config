@@ -3,10 +3,10 @@ module.exports = {
   'comma-dangle': 0,
   'import/extensions': [
     'error',
-    'ignorePackages',
     {
       js: 'never',
       jsx: 'never',
+      svg: 'always',
       ts: 'never',
       tsx: 'never',
     },
