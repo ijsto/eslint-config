@@ -28,7 +28,8 @@ const usesBabelConfig = findUp.sync([
 ]);
 const usesNext = checkIfHasPackage('next');
 const usesReact = checkIfHasPackage('react');
-const usesStrapi = checkIfHasPackage('react');
+const usesStrapiAboveV4 = checkIfHasPackage('@strapi/strapi');
+const usesStrapi = checkIfHasPackage('strapi');
 const reactVersion = usesReact ? semver.coerce(usesReact).version : undefined;
 
 const config = {
@@ -126,7 +127,7 @@ if (usesNext) {
     ...next,
   };
 }
-if (usesStrapi) {
+if (usesStrapiAboveV4 || usesStrapi) {
   config.rules = {
     ...config.rules,
     ...strapi,
