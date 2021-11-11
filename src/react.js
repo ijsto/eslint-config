@@ -1,5 +1,12 @@
 module.exports = {
   'react/destructuring-assignment': 0,
+  'react/function-component-definition': [
+    2,
+    {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'function-expression',
+    },
+  ],
   'react/jsx-filename-extension': [
     1,
     {
