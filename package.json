@@ -1,6 +1,6 @@
 {
   "name": "@ijsto/eslint-config",
-  "version": "4.2.7",
+  "version": "4.3.0",
   "description": "ESLint and Prettier setup",
   "author": "Scott Agirs Neminskis <scott@ijs.to>",
   "repository": "git@github.com:ijsto/eslint-config.git",
@@ -18,7 +18,7 @@
     "@babel/eslint-parser": "^7.15.8",
     "@rushstack/eslint-patch": "^1.0.8",
     "dot-prop": "^6.0.1",
-    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb": "^19.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.25.2",
