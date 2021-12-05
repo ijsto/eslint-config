@@ -11,7 +11,13 @@
   },
   "main": "index.js",
   "peerDependencies": {
-    "eslint": "^7.25.0 || ^8.0.0"
+    "eslint": "^7.25.0 || ^8.0.0",
+    "prettier": ">= 2.x.x"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
@@ -28,7 +34,6 @@
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "find-up": "5.0.0",
-    "prettier": "^2.3.0",
     "read-pkg-up": "7.0.1",
     "semver": "7.3.5"
   },
