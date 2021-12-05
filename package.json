@@ -44,5 +44,10 @@
     "lint",
     "prettier",
     "vscode"
-  ]
+  ],
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  }
 }
