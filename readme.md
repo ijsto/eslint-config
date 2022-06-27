@@ -41,10 +41,6 @@ Below are the steps to install (click on the step to open the instructions).
   "[javascriptreact]": {
     "editor.formatOnSave": false
   },
-  // Auto-fix issues with ESLint when you save code changes
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
 }
 ```
 
