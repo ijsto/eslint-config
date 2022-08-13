@@ -108,6 +108,34 @@ Paste in the follow to newly created `.eslintrc`:
 
 <hr/>
 
+# Typescript
+
+If you would like to use this config with TypeScript, all you need to do is:
+
+1. Install TypeScript dependencies:
+```bash 
+  yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+2. Add the following to `.eslintrc` file
+```json
+{
+  // ...other configs
+  "parser": "@typescript-eslint/parser", // <-- Add this
+  "plugins": ["@typescript-eslint", /* ...otherPlugins */], // <-- Add this
+  "extends": [ // <-- `extends` is now an array and not an object
+    "@ijsto", 
+    "plugin:@typescript-eslint/eslint-recommended", // <-- Add this
+    "plugin:@typescript-eslint/recommended" // <-- Add this
+  ]
+  // ...other configs
+}
+
+```
+
+
+<hr/>
+
 ## **How to Uninstall**
 
 <hr />
