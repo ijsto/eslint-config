@@ -133,6 +133,12 @@ If you would like to use this config with TypeScript, all you need to do is:
 
 ```
 
+### Note 💡
+
+If you don't have `prettier` and/or `eslint` installed globally, you will also need to install that in your project's dev dependencies:
+```bash
+yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint prettier
+```
 
 <hr/>
 
