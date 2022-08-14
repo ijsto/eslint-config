@@ -114,7 +114,7 @@ If you would like to use this config with TypeScript, all you need to do is:
 
 1. Install TypeScript dependencies:
 ```bash 
-  yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+   yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint prettier
 ```
 
 2. Add the following to `.eslintrc` file
@@ -131,13 +131,6 @@ If you would like to use this config with TypeScript, all you need to do is:
   // ...other configs
 }
 
-```
-
-### Note 💡
-
-If you don't have `prettier` and/or `eslint` installed globally, you will also need to install that in your project's dev dependencies:
-```bash
-yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint prettier
 ```
 
 <hr/>
