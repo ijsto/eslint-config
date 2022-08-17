@@ -110,7 +110,7 @@ Paste in the follow to newly created `.eslintrc`:
 
 # Typescript
 
-> ### **TypeScript currently broken with `eslint v8`.**
+> ### ⚠️ **Currently `eslint v8` will break the TypeScript support.**
 > Some-what relevant: https://github.com/eslint/eslint/issues/15149
 
 If you would like to use this config with TypeScript, all you need to do is:
