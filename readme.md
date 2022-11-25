@@ -184,7 +184,7 @@ If you followed the steps, yet still cannot get ESLint to work, you can try dele
 
 ## `Insert '..' eslint(prettier/prettier)`
 - This eslint error can sometimes occur when you have clashing formatters. The easiest solution if to change the default formatter in your VS Code settings to ESLint (tutorial coming soon).
-  - If this doesn't work for your use-case, feel freet to tweet at [@scottagirs](http://twitter.com/scottagirs) or reach out on [ijs.to/@scottagirs](https://ijs.to/@scottagirs)
+  - If this doesn't work for your use-case, feel freet to tweet at [@scottagirs](http://twitter.com/scottagirs) or reach out on [ijs.to/scottagirs](https://ijs.to/scottagirs)
 
 ## **Contributing 💪🏼**
 
