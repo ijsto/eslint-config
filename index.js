@@ -39,7 +39,7 @@ const config = {
     node: true,
     'shared-node-browser': true,
   },
-  extends: ['airbnb', 'prettier'],
+  extends: ['prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     allowImportExportEverywhere: true,
@@ -57,7 +57,7 @@ const config = {
 };
 
 // NOTE: IMPORTANT: Currently hasWorkspaces is not working properly, see TODO:s below
-const hasWorkspaces = dotProp.get(pkg, `packageJson.workspaces`);
+const hasWorkspaces = dotProp.get(pkg, 'packageJson.workspaces');
 if (hasWorkspaces) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
@@ -66,9 +66,6 @@ if (hasWorkspaces) {
   // apply to individual `.eslintrc` configs.
   const rulesForWorkspaces = {
     ...config.rules,
-    ...react,
-    ...reactHooks,
-    ...jsxA11y,
   };
 
   // TODO: How to handle parsing on per-package basis.
@@ -88,36 +85,40 @@ if (hasWorkspaces) {
 if (usesReact && !usesNext) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
-  config.plugins.push('react');
+  config.plugins.push('react', 'airbnb');
   config.rules = {
     ...config.rules,
     ...react,
+    ...reactHooks,
+    ...jsxA11y,
   };
 
-  if (usesNext) {
-    dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
-    dotProp.set(config, 'settings.react.version', 'detect');
-    config.extends.push('next');
+  if (semver.gte(reactVersion, '16.8.0')) {
+    config.plugins.push('react-hooks');
     config.rules = {
       ...config.rules,
-      ...next,
-    };
-
-    if (semver.gte(reactVersion, '16.8.0')) {
-      config.plugins.push('react-hooks');
-      config.rules = {
-        ...config.rules,
-        ...reactHooks,
-      };
-    }
-
-    // Disable if in future implementing React Native.
-    config.plugins.push('jsx-a11y');
-    config.rules = {
-      ...config.rules,
-      ...jsxA11y,
+      ...reactHooks,
     };
   }
+
+  // Disable if in future implementing React Native.
+  config.plugins.push('jsx-a11y');
+  config.rules = {
+    ...config.rules,
+    ...jsxA11y,
+  };
+}
+
+if (usesNext) {
+  dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
+  dotProp.set(config, 'parserOptions.ecmaVersion', 12);
+  dotProp.set(config, 'parserOptions.sourceType', 'module');
+  dotProp.set(config, 'settings.react.version', 'detect');
+  config.extends.push('next/core-web-vitals');
+  config.rules = {
+    ...config.rules,
+    ...next,
+  };
 }
 
 if (usesBabelConfig) {
