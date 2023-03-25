@@ -62,7 +62,7 @@ if (hasWorkspaces) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
 
-  // TODO: Optimize - see if there's a way to comb through worksapces and
+  // TODO: Optimize - see if there's a way to comb through workspaces and
   // apply to individual `.eslintrc` configs.
   const rulesForWorkspaces = {
     ...config.rules,
@@ -85,7 +85,7 @@ if (hasWorkspaces) {
   config.rules = rulesForWorkspaces;
 }
 
-if (usesReact || usesNext) {
+if (usesReact && !usesNext) {
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
   config.plugins.push('react');
@@ -94,20 +94,30 @@ if (usesReact || usesNext) {
     ...react,
   };
 
-  if (semver.gte(reactVersion, '16.8.0')) {
-    config.plugins.push('react-hooks');
+  if (usesNext) {
+    dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
+    dotProp.set(config, 'settings.react.version', 'detect');
+    config.extends.push('next');
     config.rules = {
       ...config.rules,
-      ...reactHooks,
+      ...next,
+    };
+
+    if (semver.gte(reactVersion, '16.8.0')) {
+      config.plugins.push('react-hooks');
+      config.rules = {
+        ...config.rules,
+        ...reactHooks,
+      };
+    }
+
+    // Disable if in future implementing React Native.
+    config.plugins.push('jsx-a11y');
+    config.rules = {
+      ...config.rules,
+      ...jsxA11y,
     };
   }
-
-  // Disable if in future implementing React Native.
-  config.plugins.push('jsx-a11y');
-  config.rules = {
-    ...config.rules,
-    ...jsxA11y,
-  };
 }
 
 if (usesBabelConfig) {
@@ -121,12 +131,6 @@ if (usesBabelConfig) {
   ]);
 }
 
-if (usesNext) {
-  config.rules = {
-    ...config.rules,
-    ...next,
-  };
-}
 if (usesStrapiAboveV4 || usesStrapi) {
   config.rules = {
     ...config.rules,
